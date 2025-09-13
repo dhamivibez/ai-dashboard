@@ -1,5 +1,4 @@
-// app/components/Header.tsx
-'use client';
+"use client";
 
 import {
   Home,
@@ -11,38 +10,38 @@ import {
   ImageIcon,
   Headset,
   Bell,
-  Highlighter,
   Sun,
   Moon,
-} from 'lucide-react';
+  DraftingCompass,
+} from "lucide-react";
 
-import { Button } from '@/components/ui/button';
+import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { useTheme } from 'next-themes';
+} from "@/components/ui/dropdown-menu";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { useTheme } from "next-themes";
 
 export default function Header() {
   const { theme, setTheme } = useTheme();
   return (
-    <header className="w-full bg-background flex items-center justify-between px-4 py-2">
+    <header className="bg-background flex w-full items-center justify-between px-4 py-2">
       {/* Logo and User DropDown */}
 
       <div className="flex items-center gap-3">
-        <div className="w-4 h-4 bg-foreground rounded-sm" />
+        <div className="bg-foreground h-4 w-4 rounded-sm" />
 
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button
               variant="ghost"
-              className="flex items-center gap-2 text-sm text-foreground"
+              className="text-foreground flex items-center gap-2 text-sm"
             >
               Dhamivibez
-              <ChevronDown className="h-4 w-4 text-muted-foreground" />
+              <ChevronDown className="text-muted-foreground h-4 w-4" />
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent>
@@ -55,46 +54,46 @@ export default function Header() {
 
       {/* Toolbar */}
 
-      <div className="flex items-center bg-muted rounded-lg p-0.5">
-        <Button variant="ghost" size="icon" className="rounded-lg group">
-          <span className="inline-flex items-center justify-center p-2 rounded-lg bg-card transition-colors">
-            <Home className="h-4 w-4 text-foreground" />
+      <div className="bg-muted flex items-center rounded-lg p-0.5">
+        <Button variant="ghost" size="icon" className="group w-12 rounded-lg">
+          <span className="bg-card inline-flex w-full items-center justify-center rounded-lg p-2 transition-colors">
+            <Home className="text-foreground h-4 w-4" />
           </span>
         </Button>
 
-        <Button variant="ghost" size="icon" className="rounded-lg group">
-          <span className="inline-flex items-center justify-center p-2 rounded-lg group-hover:bg-card transition-colors">
-            <ImageIcon className="h-4 w-4 text-foreground" />
+        <Button variant="ghost" size="icon" className="group w-12 rounded-lg">
+          <span className="group-hover:bg-card inline-flex w-full items-center justify-center rounded-lg p-2 transition-colors">
+            <ImageIcon className="text-foreground h-4 w-4" />
           </span>
         </Button>
 
-        <Button variant="ghost" size="icon" className="rounded-lg group">
-          <span className="inline-flex items-center justify-center p-2 rounded-lg group-hover:bg-card transition-colors">
-            <Video className="h-4 w-4 text-foreground fill-current" />
+        <Button variant="ghost" size="icon" className="group w-12 rounded-lg">
+          <span className="group-hover:bg-card inline-flex w-full items-center justify-center rounded-lg p-2 transition-colors">
+            <Video className="text-foreground h-4 w-4 fill-current" />
           </span>
         </Button>
 
-        <Button variant="ghost" size="icon" className="rounded-lg group">
-          <span className="inline-flex items-center justify-center p-2 rounded-lg group-hover:bg-card transition-colors">
-            <Wand2 className="h-4 w-4 text-foreground" />
+        <Button variant="ghost" size="icon" className="group w-12 rounded-lg">
+          <span className="group-hover:bg-card inline-flex w-full items-center justify-center rounded-lg p-2 transition-colors">
+            <Wand2 className="text-foreground h-4 w-4" />
           </span>
         </Button>
 
-        <Button variant="ghost" size="icon" className="rounded-lg group">
-          <span className="inline-flex items-center justify-center p-2 rounded-lg group-hover:bg-card transition-colors">
-            <Pencil className="h-4 w-4 text-foreground" />
+        <Button variant="ghost" size="icon" className="group w-12 rounded-lg">
+          <span className="group-hover:bg-card inline-flex w-full items-center justify-center rounded-lg p-2 transition-colors">
+            <Pencil className="text-foreground h-4 w-4" />
           </span>
         </Button>
 
-        <Button variant="ghost" size="icon" className="rounded-lg group">
-          <span className="inline-flex items-center justify-center p-2 rounded-lg group-hover:bg-card transition-colors">
-            <Highlighter className="h-4 w-4 text-foreground" />
+        <Button variant="ghost" size="icon" className="group w-12 rounded-lg">
+          <span className="group-hover:bg-card inline-flex w-full items-center justify-center rounded-lg p-2 transition-colors">
+            <DraftingCompass className="text-foreground h-4 w-4" />
           </span>
         </Button>
 
-        <Button variant="ghost" size="icon" className="rounded-lg group">
-          <span className="inline-flex items-center justify-center p-2 rounded-lg group-hover:bg-card transition-colors">
-            <Folder className="h-4 w-4 text-sidebar-foreground fill-current" />
+        <Button variant="ghost" size="icon" className="group w-12 rounded-lg">
+          <span className="group-hover:bg-card inline-flex w-full items-center justify-center rounded-lg p-2 transition-colors">
+            <Folder className="text-sidebar-foreground h-4 w-4 fill-current" />
           </span>
         </Button>
       </div>
@@ -116,13 +115,13 @@ export default function Header() {
         <Button
           variant="ghost"
           size="icon"
-          onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+          onClick={() => setTheme(theme === "light" ? "dark" : "light")}
           className="rounded-lg"
         >
-          {theme === 'light' ? (
-            <Sun className="h-4 w-4 text-foreground" />
+          {theme === "light" ? (
+            <Sun className="text-foreground h-4 w-4" />
           ) : (
-            <Moon className="h-4 w-4 text-foreground" />
+            <Moon className="text-foreground h-4 w-4" />
           )}
           <span className="sr-only">Toggle theme</span>
         </Button>
