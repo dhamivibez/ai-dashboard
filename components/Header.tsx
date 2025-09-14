@@ -123,10 +123,9 @@ export default function Header() {
           ) : (
             <Moon className="text-foreground h-4 w-4" />
           )}
-          <span className="sr-only">Toggle theme</span>
         </Button>
         <Avatar className="h-7 w-7">
-          <AvatarImage src="/vercel.png" alt="profile" />
+          <AvatarImage src="/profile.png" alt="profile" />
           <AvatarFallback>DH</AvatarFallback>
         </Avatar>
       </div>
