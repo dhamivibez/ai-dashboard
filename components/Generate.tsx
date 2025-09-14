@@ -76,13 +76,13 @@ export default function Generate() {
   return (
     <section className="mt-8 w-full px-4">
       <div className="flex justify-between">
-        <h3 className="text-lg font-medium">Generate</h3>
+        <h3 className="ml-4 text-lg font-medium">Generate</h3>
         <div className="flex items-center gap-1 text-blue-500">
           <ChevronDownIcon className="size-4" />
           <p className="text-xs">Show all</p>
         </div>
       </div>
-      <div className="grid grid-cols-4 gap-4">
+      <div className="grid grid-cols-4 gap-x-1">
         {models.map(({ name, description, icon, gradient, isNew }, index) => (
           <ModelCard
             key={index}

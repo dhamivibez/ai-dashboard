@@ -17,7 +17,7 @@ export const ModelCard = ({
   isNew,
 }: IModelCard) => {
   return (
-    <div className="mt-4 flex w-full items-center gap-2">
+    <div className="mt-4 flex w-full items-center gap-2 px-4 py-1">
       <div className={`h-fit w-fit rounded-md p-2 text-white ${gradient}`}>
         {icon}
       </div>
@@ -30,7 +30,7 @@ export const ModelCard = ({
             </span>
           )}
         </div>
-        <p className="w-2/3 text-[8px]">{description}</p>
+        <p className="w-3/4 text-[8px]">{description}</p>
       </div>
       <Button variant="secondary" className="text-xs">
         Open
